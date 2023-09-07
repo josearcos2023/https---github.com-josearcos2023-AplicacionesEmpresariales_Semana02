@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>CÁLCULO</h2>
+<form action="{% url 'encuesta:resultado' %}" method="POST">
+    {% csrf_token %}
+    Dato 1:
+    <input type="text" name="valor1"><br>
+    Dato 2:
+    <input type="text" name="valor2"><br>
+    Tipo de Operacion:
+    <select name="operacion">
+        <option value="suma" selected="selected">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="multiplicacion">Multiplicación</option>
+        <option value="division">División</option>
+    </select><br>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+
+</form>
+{% endblock %}

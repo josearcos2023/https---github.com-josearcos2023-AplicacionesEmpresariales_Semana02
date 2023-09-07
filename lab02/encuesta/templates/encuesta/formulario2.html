@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>CÁLCULO DEL VOLUMEN DE UN CILINDRO</h2>
+
+<form action="{% url 'encuesta:resultado2' %}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="diametro">Introduzca el diámetro en metros</label>
+      <input type="text" class="form-control" id="diametro" name="diametro">
+    </div>
+    <div class="form-group">
+      <label for="altura">Introduzca la altura en metros</label>
+      <input type="text" class="form-control" id="altura" name="altura">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock %}
