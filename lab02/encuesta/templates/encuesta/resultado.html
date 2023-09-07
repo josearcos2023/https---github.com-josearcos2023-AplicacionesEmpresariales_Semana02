@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-<h2>Resultado</h2>
-<p>La {{ operacion }} de {{ valor1 }} y {{ valor2 }} es {{ resultado }} </p>
-</div>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h2 class="card-title">RESULTADO</h2>
+      <p class="card-text">La {{ operacion }} de {{ valor1 }} y {{ valor2 }} es {{ resultado }} </p>
+    </div>
+  </div>
+  
 {% endblock %}
